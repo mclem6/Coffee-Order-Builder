@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:id = "root2" styleClass="firstContainer" fx:controller = "MyController">
+
+<top>
+                <VBox alignment="CENTER" fx:id="header_bar" prefHeight= "50">
+                    <HBox alignment="CENTER">
+                    <Text fill = "black" text= "The Coffee Shop" style="-fx-font-size: 20px;"/>
+                    </HBox>
+                    
+                    <!-- <HBox alignment="CENTER_RIGHT">
+                        <Button fx:id="iconbtn">   
+                            <graphic>
+                                <ImageView fx:id="cartImageView" fitHeight="24" fitWidth="24">
+                                    <image>
+                                        <Image url="/images/cart-icon.png"/>
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </HBox> -->
+
+                </VBox>
+    
+           </top>
+           <center>
+                <HBox>
+                    <VBox alignment= "CENTER" prefWidth= "500" spacing= "20" style="-fx-padding: 20 10 0 20;">
+                            <ImageView fx:id="coffeeImageView" fitHeight="150" fitWidth="150">
+                                <image>
+                                    <Image url="/images/coffeeImage.jpg"/>
+                                </image>
+                            </ImageView>
+                        <Button fx:id= "xshotBtn" text=" + extra shot" onAction= "#pressXtraShotBtn"/>
+                        <Button fx:id= "sugarBtn" text=" + add sugar" onAction= "#pressSugarBtn"/>
+                        <Button fx:id= "creamBtn" text=" + add cream" onAction= "#pressCreamBtn"/>
+                        <Button fx:id= "cinnamonBtn" text=" + add cinnamon" onAction= "#pressCinnamonBtn"/>
+                        <Button fx:id= "vanillaBtn" text=" + add vanilla" onAction= "#pressVanillaBtn"/>
+                    </VBox>
+
+                    <VBox fx:id="leftSideVBox" alignment="TOP_CENTER">
+                        <Text text="My Order"/>
+                        <TextArea fx:id= "orderTextArea" prefHeight = "400" text="Black Coffee: $4.50"/>
+                        <Text fx:id="orderTotalText" text="Total: $4.50"/>
+
+                        <HBox>
+                            <Button fx:id="restartBtn" text= "Restart" onAction="#restartBtn"/>
+                            <Button fx:id="addToCartBtn" text= "Add to Cart" onAction="#addToCartBtn"/>
+                        </HBox>
+                        <TextArea fx:id="cartTextArea" visible="false"/>
+                    </VBox>
+                    
+                
+                </HBox>
+           </center>
+           
+</BorderPane>
